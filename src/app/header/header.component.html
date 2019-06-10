@@ -1,0 +1,24 @@
+
+<mat-toolbar color="primary">
+    <mat-menu #rootMenu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="subMenu">Power</button>
+        <button mat-menu-item>System settings</button>
+      </mat-menu>
+      
+      <mat-menu #subMenu="matMenu">
+        <button mat-menu-item>Shut down</button>
+        <button mat-menu-item>Restart</button>
+        <button mat-menu-item>Hibernate</button>
+      </mat-menu>
+      
+      <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+  <span>{{ tituloApp }}</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <button mat-button>Iniciar Sesión</button>
+</mat-toolbar>
