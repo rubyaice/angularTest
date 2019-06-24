@@ -3,10 +3,38 @@
 <div>
 
   <p>Nombre del empleado: {{ nombre }}</p>
-  <p>Edad del empleado: {{ edad }}</p>
+  <p *ngIf="edad >= 18; else menor">Edad del empleado: {{ edad }}, Es mayor de edad</p>
+  <ng-template #menor><p>Edad del empleado: {{ edad }}, Es menor de edad</p></ng-template>
   <p>Email del empleado: {{ email }}</p>
   <p>Sueldos del empleado: {{ ultimos3Sueldos() }}</p>
-  <p>Nombre del empleado: {{ esActivo() }}</p>
+  <p>Estatus del empleado: {{ esActivo() }}</p>
+
+  <table border="1">
+    <tr>
+      <td>Sueldos</td>
+    </tr>
+    <tr *ngFor="let sueldo of sueldos">
+      <td>{{sueldo}}</td>
+    </tr>
+  </table>
+
+</div>
+
+<div>
+
+  <p>{{ contador }}</p>
+
+  <button (click)="incrementar()">Incrementar</button>
+  <button (click)="decrementar()">Decrementar</button>
+
+</div>
+<br>
+<div>
+
+
+    <span>Ingrese su nombre: </span><input type="text" [(ngModel)]="nombre">
+    <span>Ingrese su apellido: </span><input type="text" [(ngModel)]="apellido">
+    <p>Nombre y Apellido: {{ nombre }}, {{ apellido }}</p>
 
 </div>
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,11 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angularTest';
 
-  nombre = 'Andres Silva';
+  nombre = '';
+  apellido = '';
   edad = 26;
   email = 'andrex.silva.777@gmail.com';
   sueldos = [1700, 1600, 1500];
   activo = true;
+  contador = 1;
 
   // metood para saber si el empleado esta activo o no
   esActivo() {
@@ -35,5 +38,19 @@ export class AppComponent {
     }
 
     return suma;
+  }
+
+  // metodo para incrementar y decrementar un valor
+  incrementar() {
+
+    this.contador++;
+
+  }
+
+  // metodo para decrementar un valor
+  decrementar() {
+
+    this.contador--;
+
   }
 }

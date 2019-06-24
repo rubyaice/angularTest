@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // importaciones de material
 import {A11yModule} from '@angular/cdk/a11y';
@@ -100,7 +101,8 @@ import { HeaderComponent } from './header/header.component';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule
   ],
 
   exports: [
