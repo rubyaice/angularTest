@@ -31,11 +31,20 @@
 <br>
 <div>
 
-
     <span>Ingrese su nombre: </span><input type="text" [(ngModel)]="nombre">
     <span>Ingrese su apellido: </span><input type="text" [(ngModel)]="apellido">
     <p>Nombre y Apellido: {{ nombre }}, {{ apellido }}</p>
 
+</div>
+
+<div>
+  <a routerLink="/administrador">Administrador Componente</a>
+</div>
+
+<hr>
+<div style="text-align: center;">
+  <app-dado></app-dado>
+  <hr>
 </div>
 
 <router-outlet></router-outlet>
